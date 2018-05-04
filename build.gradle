@@ -8,6 +8,9 @@ buildscript {
         classpath "com.bertramlabs.plugins:asset-pipeline-gradle:2.14.2"
         classpath 'com.bmuschko:gradle-clover-plugin:2.2.1'
     }
+
+    configurations.classpath.exclude group: 'xerces', module: 'xercesImpl'
+
 }
 
 version "0.1"
