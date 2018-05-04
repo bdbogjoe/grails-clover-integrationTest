@@ -1,1 +1,1 @@
-# https://github.com/bmuschko/gradle-clover-plugin/issues/116
+https://github.com/bmuschko/gradle-clover-plugin/issues/116
