@@ -16,12 +16,12 @@ buildscript {
 version "0.1"
 group "clover.integrationtest"
 
-apply plugin:"eclipse"
-apply plugin:"idea"
-apply plugin:"org.grails.grails-plugin"
-apply plugin:"org.grails.grails-plugin-publish"
-apply plugin:"org.grails.grails-gsp"
-apply plugin:"asset-pipeline"
+apply plugin: "eclipse"
+apply plugin: "idea"
+apply plugin: "org.grails.grails-plugin"
+apply plugin: "org.grails.grails-plugin-publish"
+apply plugin: "org.grails.grails-gsp"
+apply plugin: "asset-pipeline"
 apply plugin: 'com.bmuschko.clover'
 
 repositories {
@@ -68,7 +68,7 @@ grailsPublish {
     }
     title = "My Plugin"
     desc = "Full plugin description"
-    developers = [johndoe:"John Doe"]
+    developers = [johndoe: "John Doe"]
 }
 
 
@@ -78,6 +78,9 @@ assets {
 
 
 clover {
+    report {
+        html = true
+    }
     additionalTestSourceSet {
         def sourceIntegration = sourceSets.integrationTest
         srcDirs = sourceIntegration.groovy.srcDirs.findAll { it.exists() }
